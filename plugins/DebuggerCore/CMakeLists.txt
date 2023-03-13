@@ -91,6 +91,10 @@ elseif(TARGET_PLATFORM_FREEBSD)
 		unix/freebsd/PlatformRegion.h
 		unix/freebsd/PlatformThread.cpp
 		unix/freebsd/PlatformThread.h
+		unix/Posix.cpp
+		unix/Posix.h
+		unix/Unix.cpp
+		unix/Unix.h
 	)
 endif()
 
@@ -106,7 +110,7 @@ if(TARGET_ARCH_FAMILY_X86)
 		arch/x86-generic/Breakpoint.h
 	)
 
-    if(TARGET_PLATFORM_LINUX)	
+    if(TARGET_PLATFORM_LINUX)
 		set(PLUGIN_INCLUDES
 			${PLUGIN_INCLUDES}
 			unix/linux/arch/x86-generic
