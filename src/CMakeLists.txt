@@ -199,7 +199,7 @@ if(TARGET_PLATFORM_WINDOWS)
 		LongDoubleX86.asm
 		${PROJECT_SOURCE_DIR}/include/os/win32/OSTypes.h
 	)
-elseif(TARGET_PLATFORM_LINUX)
+elseif(TARGET_PLATFORM_LINUX OR TARGET_PLATFORM_FREEBSD)
     set(edb_SRCS
         ${edb_SRCS}
 		${PROJECT_SOURCE_DIR}/include/os/unix/OSTypes.h

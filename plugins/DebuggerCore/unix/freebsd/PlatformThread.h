@@ -40,18 +40,18 @@ public:
 	edb::tid_t tid() const override;
 	QString name() const override;
 	int priority() const override;
-	edb::address_t instruction_pointer() const override;
+	edb::address_t instructionPointer() const override;
 	QString runState() const override;
 
 public:
-	void get_state(State *state) override;
-	void set_state(const State &state) override;
+	void getState(State *state) override;
+	void setState(const State &state) override;
 
 public:
 	Status step() override;
-	Status step(edb::EVENT_STATUS status) override;
+	Status step(edb::EventStatus  status) override;
 	Status resume() override;
-	Status resume(edb::EVENT_STATUS status) override;
+	Status resume(edb::EventStatus  status) override;
 
 public:
 	bool isPaused() const override;
